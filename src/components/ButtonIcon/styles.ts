@@ -1,31 +1,31 @@
 import { StyleSheet } from "react-native";
-import { theme } from "../../global/styles/theme";
+import { scale, theme } from "../../global/styles/theme";
 
 export const styles = StyleSheet.create({
   container: {
     width: "100%",
-    height: 56,
+    height: scale(56),
     backgroundColor: theme.colors.primary,
-    borderRadius: 8,
+    borderRadius: scale(8),
     flexDirection: "row",
     alignItems: "center",
   },
   title: {
     flex: 1,
     color: theme.colors.heading,
-    fontSize: 15,
+    fontSize: scale(15),
     textAlign: "center",
   },
   iconWrapper: {
-    width: 56,
-    height: 56,
+    width: scale(56),
+    height: scale(56),
     justifyContent: "center",
     alignItems: "center",
     borderRightWidth: 1,
     borderColor: theme.colors.line,
   },
   icon: {
-    width: 24,
-    height: 18,
+    width: scale(24),
+    height: scale(18),
   },
 });
