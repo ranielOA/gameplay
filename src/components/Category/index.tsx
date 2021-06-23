@@ -7,22 +7,16 @@ import { View, Text } from "react-native";
 import { styles } from "./styles";
 import { scale, theme } from "../../global/styles/theme";
 
-// interface lgprops extends React.Component<LinearGradientProps> {
-//   numberTextIncrease: number;
-// }
-
 type Props = RectButtonProps & {
   title: string;
   icon: React.FC<SvgProps>;
   checked?: boolean;
-  // lgp: React.FC<lgprops>;
 };
 
 export function Category({
   title,
   icon: Icon,
   checked = false,
-  // lgp,
   ...rest
 }: Props) {
   const { secondary50, secondary70 } = theme.colors;
