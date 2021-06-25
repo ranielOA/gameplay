@@ -4,6 +4,7 @@ import { GuildProps } from "../../components/Guild";
 
 import { Guild } from "../../components/Guild";
 import { ListDivider } from "../../components/ListDivider";
+import { scale } from "../../global/styles/theme";
 
 import { styles } from "./styles";
 
@@ -36,7 +37,12 @@ export function Guilds({ handleGuildSelect }: Props) {
           <Guild data={item} onPress={() => handleGuildSelect(item)} />
         )}
         showsVerticalScrollIndicator={false}
-        ItemSeparatorComponent={() => <ListDivider />}
+        ItemSeparatorComponent={() => <ListDivider isCentered />}
+        ListHeaderComponent={() => <ListDivider isCentered />}
+        contentContainerStyle={{
+          paddingBottom: scale(68),
+          paddingTop: scale(103),
+        }}
         style={styles.guilds}
       />
     </View>

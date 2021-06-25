@@ -7,6 +7,7 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     paddingHorizontal: scale(24),
+    marginTop: scale(27),
   },
   title: {
     fontFamily: theme.fonts.title700,

@@ -17,6 +17,5 @@ export const styles = StyleSheet.create({
     backgroundColor: theme.colors.secondary30,
     alignSelf: "center",
     marginTop: scale(13),
-    marginBottom: scale(103),
   },
 });

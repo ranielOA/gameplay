@@ -52,4 +52,12 @@ export const styles = StyleSheet.create({
     marginLeft: scale(7),
     marginRight: scale(24),
   },
+  guildIconContainer: {
+    height: scale(68),
+    width: scale(64),
+    borderRadius: scale(8),
+    alignItems: "center",
+    justifyContent: "center",
+    marginRight: scale(20),
+  },
 });

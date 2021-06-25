@@ -11,6 +11,8 @@ export const styles = StyleSheet.create({
     fontFamily: theme.fonts.text400,
     fontSize: scale(13),
     marginRight: scale(4),
-    textAlign: "center",
+    paddingHorizontal: scale(16),
+    paddingTop: scale(16),
+    textAlignVertical: "top",
   },
 });

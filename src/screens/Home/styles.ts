@@ -14,9 +14,6 @@ export const styles = StyleSheet.create({
     marginTop: getStatusBarHeight() + scale(26),
     marginBottom: scale(42),
   },
-  content: {
-    marginTop: scale(42),
-  },
   matches: {
     marginTop: scale(24),
     marginLeft: scale(24),
