@@ -9,13 +9,6 @@ import React, {
 import * as AuthSession from "expo-auth-session";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
-// import {
-//   SCOPE,
-//   CLIENT_ID,
-//   CDN_IMAGE,
-//   REDIRECT_URI,
-//   RESPONSE_TYPE,
-// } from "../configs";
 import { api } from "../services/api";
 import { COLLECTION_USERS } from "../configs/database";
 
@@ -38,6 +31,7 @@ type AuthContextData = {
   user: User;
   loading: boolean;
   signIn: () => Promise<void>;
+  singOut: () => Promise<void>;
 };
 
 type AuthProviderProps = {
@@ -91,6 +85,11 @@ function AuthProvider({ children }: AuthProviderProps) {
     }
   }
 
+  async function singOut() {
+    setUser({} as User);
+    await AsyncStorage.removeItem(COLLECTION_USERS);
+  }
+
   async function loadUserStorageData() {
     const storage = await AsyncStorage.getItem(COLLECTION_USERS);
 
@@ -112,6 +111,7 @@ function AuthProvider({ children }: AuthProviderProps) {
         user,
         signIn,
         loading,
+        singOut,
       }}
     >
       {children}

@@ -4,11 +4,15 @@ import { scale, theme } from "../../global/styles/theme";
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
+    justifyContent: "flex-end",
+    backgroundColor: theme.colors.overlay,
+  },
+  insideContainer: {
+    flex: 1,
     marginTop: scale(100),
   },
   overlay: {
     flex: 1,
-    backgroundColor: theme.colors.overlay,
   },
   bar: {
     width: scale(39),
